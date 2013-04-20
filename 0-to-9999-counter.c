@@ -7,11 +7,11 @@
  * Don't forget that you have to change the code if your display is common anode
  */
 
-int a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g = 7, dp = 8;
+int a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g = 7, dp = 8; //Display pins
 
-int d1 = 9, d2 = 10, d3 = 11, d4 = 12;
+int d1 = 9, d2 = 10, d3 = 11, d4 = 12; //Common pins
 
-int time = 100; //speed of the counter 
+int time = 100; //speed of the counter in ms
 
 void setup() {
   int i = 1;
@@ -27,6 +27,8 @@ void loop() {
   offd(d4);
   
   int i, j;
+  
+  //The counter
   for(i = 0; i<10000; i++) {
     for(j = 0; j <= (time/20); j++) {
       ond(d1);
@@ -48,12 +50,9 @@ void loop() {
       num(i/1000);
       delay(5);
       offd(d4);    
-    }
-
+    }    
     
-    
-  }
-  
+  } 
   
 }
 
